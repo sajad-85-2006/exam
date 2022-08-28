@@ -12,7 +12,6 @@
 
         </div>
     @endif
-{{--    <p>{{$r}}</p>--}}
 <form action="/admin/exam/edit/{{$id}}" method="post">
     @csrf
     @for ($x = 1; $x <= $r; $x++)
@@ -24,16 +23,29 @@
             <div style="margin-top: 30px" class="row">
                 <div class="col-3">
                     <label class="form-control-label">
-                        Ture
+                        <input name="test_{{$x}}_1" class="form-control">
                     </label>
-                    <input value="ture" class="form-check-input" type="radio" name="answer_{{$x}}" style="width:30px;height:30px" checked >
+                    <input value="test_{{$x}}_1" class="form-check-input" type="radio" name="answer_{{$x}}" style="width:30px;height:30px" checked >
 
                 </div>
                 <div class="col-3">
                     <label class="form-control-label">
-                        False
+                        <input name="test_{{$x}}_2" class="form-control">
                     </label>
-                    <input value="false" class="form-check-input" type="radio" name="answer_{{$x}}" style="width:30px;height:30px"  >
+                    <input value="test_{{$x}}_2" class="form-check-input" type="radio" name="answer_{{$x}}" style="width:30px;height:30px"  >
+
+                </div>
+                <div class="col-3">
+                    <label class="form-control-label">
+                        <input name="test_{{$x}}_3" class="form-control">
+                    </label>
+                    <input value="test_{{$x}}_3" class="form-check-input" type="radio" name="answer_{{$x}}" style="width:30px;height:30px"  >
+
+                </div>                <div class="col-3">
+                    <label class="form-control-label">
+                        <input name="test_{{$x}}_4" class="form-control">
+                    </label>
+                    <input value="test_{{$x}}_4" class="form-check-input" type="radio" name="answer_{{$x}}" style="width:30px;height:30px"  >
 
                 </div>
 

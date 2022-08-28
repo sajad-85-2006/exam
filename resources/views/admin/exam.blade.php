@@ -30,7 +30,7 @@
                 <tbody>
                 @foreach($Exam as $E)
                     <tr data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <td><a href="/admin/exam/{{$E['id']}}">{{$E['qu']}}</a></td>
+                        <td><a href="/admin/exam/{{$E['id']}}">{{$E['question']}}</a></td>
                         <td>{{$E['answer']}}</td>
                         <td>{{\App\Models\Test::where('id',$E['test_id'])->first('title')->title}}</td>
                         <td>{{$E['created_at']}}</td>
